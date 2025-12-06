@@ -14,14 +14,14 @@ body {
     sans-serif;
   background:
     radial-gradient(circle at var(--mouse-x) var(--mouse-y),
-      #e0f2fe 0,
-      #f5f5f7 40%,
-      #e5e7eb 100%);
-  color: #222;
+      #bfdbfe 0,
+      #e5e7eb 35%,
+      #111827 100%);
+  color: #111827;
   line-height: 1.6;
   min-height: 100vh;
-  transition: background 0.12s ease-out;
 }
+
 
 
 /* Header */
