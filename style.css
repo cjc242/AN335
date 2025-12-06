@@ -1,9 +1,10 @@
+/* Reactive background variables */
 :root {
   --mouse-x: 50%;
   --mouse-y: 50%;
 }
 
-/* page setup */
+/* Basic page setup */
 * {
   box-sizing: border-box;
 }
@@ -14,22 +15,21 @@ body {
     sans-serif;
   background:
     radial-gradient(circle at var(--mouse-x) var(--mouse-y),
-      #bfdbfe 0,
-      #e5e7eb 35%,
-      #111827 100%);
+      #f97316 0,
+      #fed7aa 18%,
+      #0f172a 100%);
   color: #111827;
   line-height: 1.6;
   min-height: 100vh;
 }
 
-
-
 /* Header */
 .site-header {
-  background: #111827;
+  background: rgba(15, 23, 42, 0.9);
   color: #f9fafb;
   padding: 1.5rem 1.5rem 1rem;
   text-align: center;
+  backdrop-filter: blur(8px);
 }
 
 .site-header h1 {
@@ -57,14 +57,15 @@ body {
   border-radius: 999px;
   font-size: 0.9rem;
   border: 1px solid transparent;
+  background: rgba(15, 23, 42, 0.6);
 }
 
 .nav-link:hover {
-  border-color: #9ca3af;
+  border-color: #f97316;
 }
 
 .nav-link.active {
-  background: #f9fafb;
+  background: #f97316;
   color: #111827;
 }
 
@@ -76,11 +77,12 @@ body {
 }
 
 .card {
-  background: #ffffff;
+  background: rgba(249, 250, 251, 0.96);
   border-radius: 0.75rem;
   padding: 1.25rem 1.5rem;
   margin-bottom: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(15, 23, 42, 0.12);
 }
 
 .card h2 {
@@ -106,5 +108,7 @@ body {
   text-align: center;
   padding: 1rem;
   font-size: 0.85rem;
-  color: #6b7280;
+  color: #e5e7eb;
+  background: rgba(15, 23, 42, 0.9);
+  margin-top: 2rem;
 }
