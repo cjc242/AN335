@@ -62,33 +62,31 @@
     yearSpan.textContent = new Date().getFullYear();
   }
 
-  // Reactive background: move a soft "spotlight" with the mouse
-  function updateBackgroundFromPosition(clientX, clientY) {
-    const xPercent = (clientX / window.innerWidth) * 100;
-    const yPercent = (clientY / window.innerHeight) * 100;
+  // Chimp follower: move the chimp image to the cursor/touch position
+  const chimp = document.getElementById("chimp-follow");
 
-    document.documentElement.style.setProperty("--mouse-x", xPercent + "%");
-    document.documentElement.style.setProperty("--mouse-y", yPercent + "%");
+  function moveChimp(clientX, clientY) {
+    if (!chimp) return;
+    chimp.style.left = clientX + "px";
+    chimp.style.top = clientY + "px";
   }
 
   // Desktop: track mouse movement
   document.addEventListener("mousemove", (event) => {
-    updateBackgroundFromPosition(event.clientX, event.clientY);
+    moveChimp(event.clientX, event.clientY);
   });
 
   // Mobile / touch devices: track finger movement
   document.addEventListener("touchmove", (event) => {
     if (event.touches && event.touches[0]) {
-      updateBackgroundFromPosition(
-        event.touches[0].clientX,
-        event.touches[0].clientY
-      );
+      moveChimp(event.touches[0].clientX, event.touches[0].clientY);
     }
   });
 
-  // Initial position (centered)
-  updateBackgroundFromPosition(window.innerWidth / 2, window.innerHeight / 2);
+  // Start chimp at center
+  moveChimp(window.innerWidth / 2, window.innerHeight / 2);
 </script>
+
 
 </body>
 </html>
