@@ -24,7 +24,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 9999;
-  /* remove translate: this keeps the cursor at the top-left of the chimp */
+  transform: translate(0px, -18px);
 }
 
 /* === HEADER === */
