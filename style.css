@@ -24,7 +24,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   z-index: 9999;
-  transform: translate(0px, -30px);
+  transform: translate(-1px, -50px);
 }
 
 /* === HEADER === */
