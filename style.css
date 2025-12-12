@@ -97,7 +97,7 @@ body {
   z-index: 1000;
 }
 
-/* Show menu on hover */
+/* Show menu on click */
 .nav-dropdown.open .nav-dropdown-menu {
   display: block;
 }
@@ -143,8 +143,7 @@ body {
   transition: opacity 0.15s ease-out, transform 0.15s ease-out;
 }
 
-/* When dropdown is open or hovered */
-.nav-dropdown:hover .nav-dropdown-menu,
+/* When dropdown is open*/
 .nav-dropdown.open .nav-dropdown-menu {
   display: block;
   opacity: 1;
@@ -161,7 +160,7 @@ body {
   transition: background 0.12s ease-out, padding-left 0.15s ease-out;
 }
 
-.nav-dropdown-item:hover {
+.nav-dropdown-item {
   background: #1f2937;
   color: #f97316;
   padding-left: 1.2rem;
