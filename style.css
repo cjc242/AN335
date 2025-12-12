@@ -88,7 +88,7 @@ body {
   display: none;
   position: absolute;
   left: 0;
-  margin-top: 0rem;
+  margin-top: 0;
   background: #111827;
   border-radius: 0.5rem;
   min-width: 220px;
@@ -98,7 +98,7 @@ body {
 }
 
 /* Show menu on hover */
-.nav-dropdown:hover .nav-dropdown-menu {
+.nav-dropdown.open .nav-dropdown-menu {
   display: block;
 }
 
@@ -109,6 +109,7 @@ body {
   text-decoration: none;
   color: #e5e7eb;
   font-size: 0.9rem;
+  transition: background 0.12s ease-out, padding-left 0.15s ease-out;
 }
 
 .nav-dropdown-item:hover {
