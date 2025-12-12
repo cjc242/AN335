@@ -116,6 +116,56 @@ body {
   color: #f97316;
 }
 
+/* Highlight Topics when you're on a topic page */
+.nav-link-dropdown.active-topics {
+  background: linear-gradient(90deg, #f97316, #fb923c);
+  color: #111827;
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+}
+
+/* Animate dropdown menu */
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  margin-top: 0.2rem; /* smaller gap */
+  background: #111827;
+  border-radius: 0.5rem;
+  min-width: 220px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  padding: 0.4rem 0;
+  z-index: 1000;
+
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+}
+
+/* When dropdown is open or hovered */
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Dropdown item styling */
+.nav-dropdown-item {
+  display: block;
+  padding: 0.45rem 0.9rem;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  transition: background 0.12s ease-out, padding-left 0.15s ease-out;
+}
+
+.nav-dropdown-item:hover {
+  background: #1f2937;
+  color: #f97316;
+  padding-left: 1.2rem;
+}
+
 /* === CONTENT === */
 .content {
   max-width: 900px;
