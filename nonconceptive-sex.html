@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cooperation – AN335</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="chimp-follow" class="chimp-follow"></div>
+
+  <header class="site-header">
+    <h1>Cooperation</h1>
+    <p class="tagline">AN335 – UnEssay Project</p>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="sources.html" class="nav-link">Sources</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="card">
+      <h2>Introduction</h2>
+      <p>Write your cooperation section here…</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Christian Johnson. Created for AN335.</p>
+  </footer>
+
+  <script>
+    // YEAR SCRIPT
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+    // CHIMP FOLLOWER
+    const chimp = document.getElementById("chimp-follow");
+    function moveChimp(x, y) {
+      chimp.style.left = x + "px";
+      chimp.style.top = y + "px";
+    }
+    document.addEventListener("mousemove", (e) => moveChimp(e.clientX, e.clientY));
+    document.addEventListener("touchmove", (e) => {
+      if (e.touches[0]) moveChimp(e.touches[0].clientX, e.touches[0].clientY);
+    });
+  </script>
+</body>
+</html>
