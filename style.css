@@ -168,6 +168,26 @@ body {
   font-size: 1.3rem;
 }
 
+/* Image cards */
+.card figure {
+  margin: 0 0 0.75rem;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+  border-radius: 0.6rem;
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.card figcaption {
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin-top: 0.25rem;
+}
+
+
 /* === SOURCE LIST === */
 .source-list {
   padding-left: 1.25rem;
